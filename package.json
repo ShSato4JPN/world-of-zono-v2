@@ -23,7 +23,10 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.7",
     "@commitlint/config-conventional": "17.6.7",
+    "eslint-plugin-react": "7.33.0",
+    "eslint-plugin-react-hooks": "5.0.0-canary-7118f5dd7-20230705",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3"
+    "lint-staged": "13.2.3",
+    "prettier": "3.0.0"
   }
 }
