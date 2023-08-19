@@ -1,7 +1,8 @@
 import client from "@/libs/client";
 import * as contentful from "contentful";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-type BlogPostSkeleton = {
+export type BlogPostSkeleton = {
   contentTypeId: "worldOfZonoV2";
   fields: {
     title: contentful.EntryFieldTypes.Text;
@@ -11,16 +12,14 @@ type BlogPostSkeleton = {
   };
 };
 
-export type BlogPostsData = contentful.EntryCollection<
-  BlogPostSkeleton,
-  undefined,
-  string
->;
+export type BlogPostsData = contentful.EntryCollection<BlogPostSkeleton>;
 
-export async function GET(request: Request): Promise<Response> {
-  const { searchParams } = new URL(request.url);
-  const skip = Number(searchParams.get("skip") || 0);
-  const limit = Number(searchParams.get("limit") || 10);
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  const skip = Number(req.query.skip || 0);
+  const limit = Number(req.query.limit || 5);
 
   const entries = await client.getEntries<BlogPostSkeleton>({
     content_type: "worldOfZonoV2",
@@ -29,5 +28,5 @@ export async function GET(request: Request): Promise<Response> {
     skip,
   });
 
-  return new Response(JSON.stringify(entries));
+  res.json(entries);
 }
