@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageNumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: var(--color-light-white);
+  color: var(--color-brand);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: var(--color-blue);
+    color: var(--color-light-white);
+  }
+}
+
+.item span {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.break {
+  color: var(--color-blue);
+}
+
+.current {
+  background-color: var(--color-blue);
+  color: var(--color-light-white);
+}
