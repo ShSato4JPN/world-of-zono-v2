@@ -25,16 +25,16 @@ function Pagination({
           n === current ||
           n === current - 1 ||
           n === current + 1 ||
-          ((current === 1 || current === 2) && (n === 3 || n === 4)) ||
-          ((current === totalPages || current === totalPages - 1) &&
+          (current <= 2 && (n === 3 || n === 4)) ||
+          (totalPages - 2 <= current &&
             (n === totalPages - 2 || n === totalPages - 3)),
       );
     // 1 ページと 2 ページの間のセパレータ
-    if (6 <= totalPages && 5 <= current) {
+    if (6 <= totalPages && 4 <= current) {
       numbers.splice(1, 0, -1);
     }
     // 最後のページと最後から 2 番目のページの間のセパレータ
-    if (6 <= totalPages && current <= 5) {
+    if (5 < totalPages && current <= totalPages - 3) {
       numbers.splice(-1, 0, -2);
     }
 
