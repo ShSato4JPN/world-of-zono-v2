@@ -1,0 +1,24 @@
+pre {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.quote {
+  margin-top: 1rem;
+}
+
+.quote span {
+  padding: 0 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.75rem 0.75rem 0px 0px;
+  background-color: orange;
+}
+
+.image {
+  width: 100%;
+}
+
+.test {
+  background-color: orange;
+}
