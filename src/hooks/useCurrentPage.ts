@@ -6,7 +6,12 @@ export default function useCurrentPage() {
   const pathName = usePathname();
 
   const currentPage = Number(searchParams?.get("page") || 1);
-  const path = pathName || "/";
+  const path =
+    pathName
+      ?.match(/\/([^/]+)/)
+      ?.at(1)
+      ?.replace("/", "") || "home";
+  ("");
 
   return { path, currentPage };
 }
