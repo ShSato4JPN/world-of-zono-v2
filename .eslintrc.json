@@ -18,5 +18,9 @@
         "no-undef": "off"
       }
     }
-  ]
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error" // <--- THIS IS THE NEW RULE
+  }
 }
