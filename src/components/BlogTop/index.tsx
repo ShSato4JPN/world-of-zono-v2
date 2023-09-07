@@ -6,6 +6,7 @@ import PostCard from "@/components/PostCard";
 import useSWR from "swr";
 import { BlogAssetLinkType } from "@/types/contentful-types";
 import styles from "./style.module.scss";
+import Separator from "@/components/Separator";
 import { useMemo } from "react";
 import dayjs from "dayjs";
 
@@ -16,18 +17,22 @@ type BlogTopProps = {
 function BlogTop({ range }: BlogTopProps): JSX.Element {
   const { path, currentPage } = useCurrentPage();
   const skip = (currentPage - 1) * range;
-  const { data } = useSWR<BlogPostsData>(`/api/posts?skip=${skip}`);
+  const { data } = useSWR<BlogPostsData>(
+    `/api/posts?skip=${skip}?limit=${range}`,
+  );
   const totalPages = Math.ceil((data?.total || 1) / range);
 
   const existsThumbnail = (thumbnail: BlogAssetLinkType): boolean =>
     0 < Object.keys(thumbnail).length;
 
-  const items = useMemo(
+  const cards = useMemo(
     () =>
       data?.items.map((v) => {
         const postId = v.sys.id;
         const title = v.fields.title as string;
         const body = v.fields.body as string;
+        // body の内容を整形する
+        const shapedBody = body.replace(/<br\s*\/>/g, " ");
         const categories = v.fields.category as string[];
         const publishedAt = dayjs(v.fields.publishedAt as string).format(
           "YYYY-MM-DD",
@@ -45,7 +50,7 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
             slug={{
               postId,
               title,
-              body,
+              body: shapedBody,
               categories,
               publishedAt,
               thumbnail: {
@@ -63,7 +68,15 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
   return (
     <div className={styles["wrapper"]}>
       <main className={styles["container"]}>
-        <div className={styles["cards"]}>{items}</div>
+        <div className={styles["blog__information"]}>
+          <h1 className={styles["blog__information__message"]}>
+            不定期でブログを更新しています
+            <br />
+            主に開発技術や趣味のギターや植物の記事を書いていこうと思います
+          </h1>
+        </div>
+        <div className={styles["cards"]}>{cards}</div>
+
         <div className={styles["pagination"]}>
           <Pagination
             path={path}

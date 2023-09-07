@@ -3,9 +3,9 @@ import SwrConfig from "@/components/SwrConfig";
 import BlogTop from "@/components/BlogTop";
 import { BlogPostsData } from "@/api/posts";
 
-async function getEntries(page: number): Promise<BlogPostsData> {
+async function getEntries(page: number, range: number): Promise<BlogPostsData> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/posts?skip=${page}`,
+    `${process.env.NEXT_PUBLIC_URL}/api/posts?skip=${page}&limit=${range}`,
     {
       cache: "no-store",
     },
@@ -21,14 +21,12 @@ async function Page({
 }): Promise<JSX.Element> {
   const range = 5;
   const page = (Number(searchParams.page || 1) - 1) * range;
-  const data = await getEntries(page);
+  const data = await getEntries(page, range);
 
   return (
-    <>
-      <SwrConfig value={{ fallbackData: data }}>
-        <BlogTop range={range} />
-      </SwrConfig>
-    </>
+    <SwrConfig value={{ fallbackData: data }}>
+      <BlogTop range={range} />
+    </SwrConfig>
   );
 }
 
