@@ -5,7 +5,7 @@ import ArticleViewer from "@/components/ArticleViewer";
 import styles from "./style.module.scss";
 import dayjs from "dayjs";
 import Separator from "@/components/Separator";
-import CategoriesLink from "@/components/CategoriesLink";
+import CategoriesLink from "@/components/TagLink";
 // import AbgoutMe from "@/components/AboutMe";
 
 type BlogPostProps = {
@@ -42,9 +42,6 @@ function BlogPost({ id }: BlogPostProps): JSX.Element {
             <ArticleViewer stringHTML={body} />
           </div>
         </article>
-        {/* <div className={styles["aboutMe"]}>
-          <AbgoutMe />
-        </div> */}
       </main>
     </div>
   );
