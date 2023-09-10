@@ -89,21 +89,21 @@ function HamburgerMenu(): JSX.Element {
                   <div className={styles["menu-context__sns"]}>
                     <a href="/">
                       <AiFillInstagram
-                        color="orange"
+                        color="#f4f4f4"
                         size={40}
                         className={styles["menu-context__sns-instagram"]}
                       />
                     </a>
                     <a href="/">
                       <AiFillTwitterCircle
-                        color="orange"
+                        color="#f4f4f4"
                         size={40}
                         className={styles["menu-context__sns-twitter"]}
                       />
                     </a>
                     <a href="/">
                       <AiFillGithub
-                        color="orange"
+                        color="#f4f4f4"
                         size={40}
                         className={styles["menu-context__sns-github"]}
                       />

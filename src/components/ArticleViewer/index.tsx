@@ -31,12 +31,12 @@ const options: HTMLReactParserOptions = {
         const code = node.data.replace(/ {2}/g, " ".repeat(indentSize));
         const highlightedCode = hljs.highlightAuto(code).value;
         return (
-          <div className="code-block">
+          <>
             <div className="quote">{quote && <span>{quote}</span>}</div>
             <pre>
               <code className="hljs">{parse(highlightedCode)}</code>
             </pre>
-          </div>
+          </>
         );
       }
     }

@@ -45,21 +45,21 @@ function Header(): JSX.Element {
           <div className={styles["header__other-links__sns"]}>
             <a href="/" target="_blank" rel="noreferrer noopener">
               <AiFillInstagram
-                color="orange"
+                color="#f4f4f4"
                 size={40}
                 className={styles["header__other-links__sns-instagram"]}
               />
             </a>
             <a href="/" target="_blank" rel="noreferrer noopener">
               <AiFillTwitterCircle
-                color="orange"
+                color="#f4f4f4"
                 size={40}
                 className={styles["header__other-links__sns-twitter"]}
               />
             </a>
             <a href="/" target="_blank" rel="noreferrer noopener">
               <AiFillGithub
-                color="orange"
+                color="#f4f4f4"
                 size={40}
                 className={styles["header__other-links__sns-github"]}
               />

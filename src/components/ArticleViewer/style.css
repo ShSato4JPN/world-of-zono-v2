@@ -1,18 +1,20 @@
 pre {
   margin: 0 0 1rem 0;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
 
 .quote {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .quote span {
+  display: inline-block;
   padding: 0 3rem;
   font-size: 1.7rem;
   border-radius: 0.75rem 0.75rem 0px 0px;
-  background-color: orange;
+  background-color: var(--color-post-quote);
 }
 
 .image {
