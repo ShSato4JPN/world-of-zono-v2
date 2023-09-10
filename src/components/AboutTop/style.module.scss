@@ -1,14 +1,12 @@
 .wrapper {
   width: 100%;
-  height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container {
-  padding: 10px;
-  line-height: 2.8rem;
+  color: var(--color-font-black);
 }
 
 .header {

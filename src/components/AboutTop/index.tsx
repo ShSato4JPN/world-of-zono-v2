@@ -1,9 +1,11 @@
 "use client";
 import styles from "./style.module.scss";
 import Image from "next/image";
-import Link from "next/link";
-import Separator from "@/components/Separator";
-import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
+import {
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillGithub,
+} from "react-icons/ai";
 
 function AboutTop(): JSX.Element {
   return (
@@ -36,14 +38,21 @@ function AboutTop(): JSX.Element {
           <div className={styles["body__sns"]}>
             <a href="/">
               <AiFillInstagram
-                color="orange"
+                color="#f4f4f4"
                 size={40}
                 className={styles["body__sns-instagram"]}
               />
             </a>
             <a href="/">
               <AiFillTwitterCircle
-                color="orange"
+                color="#f4f4f4"
+                size={40}
+                className={styles["body__sns-twitter"]}
+              />
+            </a>
+            <a href="/">
+              <AiFillGithub
+                color="#f4f4f4"
                 size={40}
                 className={styles["body__sns-twitter"]}
               />
