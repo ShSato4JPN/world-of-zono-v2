@@ -13,7 +13,7 @@ import {
 function HamburgerMenu(): JSX.Element {
   const { path } = useCurrentPage();
   const [isOpen, setOpen] = useState(false);
-  // WOZ　のルーティング一覧(path との依存関係のためメモ化)
+  // WOZ のルーティング一覧(path との依存関係のためメモ化)
   //const pages = useMemo(() => ["home", "blog", "about", "contact"], []);
   const pages = useMemo(() => ["home", "blog", "about"], []);
 
