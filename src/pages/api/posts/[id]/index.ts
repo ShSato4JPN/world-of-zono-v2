@@ -28,6 +28,7 @@ export default async function handler(
   const { id } = req.query as ApiProps;
   try {
     const entry = await client.getEntry<BlogPostSkeleton>(id);
+
     res.json(entry);
   } catch (error) {
     res.status(404).json({ message: "not found" });

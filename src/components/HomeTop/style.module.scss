@@ -1,8 +1,8 @@
-$wrapper-width: calc(90vh - 50px);
+$wrapper-height: calc(90vh - 50px);
 
 .wrapper {
   width: 100%;
-  height: $wrapper-width;
+  height: $wrapper-height;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,52 +11,82 @@ $wrapper-width: calc(90vh - 50px);
 .container {
   width: 100%;
   height: 100%;
-  color: var(--color-font-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.message {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.swing {
+  animation-name: swing;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
-  &__image {
-    position: absolute;
-    width: 350px;
-    height: 600px;
-    top: 49%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.updown {
+  animation-name: updown;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
-    @media screen and (min-width: 980px) {
-      top: 55%;
-      width: 600px;
-      height: 600px;
-    }
+.roll {
+  animation-name: roll;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swing {
+  10% {
+    transform: rotate(0deg);
   }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+  90% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
 
-  &__text {
-    position: absolute;
-    z-index: 1;
-    width: 350px;
-    height: 200px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 4.3rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+@keyframes updown {
+  0% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(4rem);
+  }
+}
 
-    @media screen and (min-width: 980px) {
-      width: 600px;
-      font-size: 6rem;
-    }
-
-    &-emphasize {
-      color: var(--color-main);
-    }
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }

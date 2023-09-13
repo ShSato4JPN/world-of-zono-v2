@@ -25,9 +25,7 @@ $card-width: 402px;
   }
 }
 
-.blog__information {
-  display: none;
-
+.tag__information {
   @media screen and (min-width: 980px) {
     width: 100%;
     display: contents;
@@ -35,10 +33,15 @@ $card-width: 402px;
     background-color: orange;
   }
 
-  &__message {
-    font-size: 2.3rem;
-    line-height: 4.5rem;
+  &__text {
     color: var(--color-font-black);
+    font-size: 2.2rem;
+
+    &-bold {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin: 0 0.5rem;
+    }
   }
 }
 

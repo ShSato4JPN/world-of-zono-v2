@@ -15,33 +15,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.header__icon {
-  img {
-    border-radius: 50%;
-    border: 1px solid var(--color-border);
+  &__icon {
+    margin-top: 5rem;
 
-    @media screen and (min-width: 980px) {
-      width: 300px;
-      height: 300px;
+    img {
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+
+      @media screen and (min-width: 980px) {
+        width: 300px;
+        height: 300px;
+      }
     }
   }
-}
 
-.header__name {
-  margin: 10px;
-
-  @media screen and (min-width: 980px) {
-    margin: 20px;
-  }
-
-  span {
-    font-weight: bold;
-    font-size: 2rem;
-
+  &__name {
     @media screen and (min-width: 980px) {
-      font-size: 3.5rem;
+      margin: 20px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 2rem;
+
+      @media screen and (min-width: 980px) {
+        font-size: 3.5rem;
+      }
     }
   }
 }

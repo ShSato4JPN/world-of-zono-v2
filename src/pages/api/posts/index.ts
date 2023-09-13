@@ -20,7 +20,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const skip = Number(req.query.skip || 0);
-  const limit = Number(req.query.limit || 5);
+  const limit = Number(req.query.limit || 8);
 
   const entries = await client.getEntries<BlogPostsSkeleton>({
     content_type: "worldOfZonoV2",

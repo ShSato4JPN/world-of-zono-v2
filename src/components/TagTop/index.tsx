@@ -9,11 +9,12 @@ import styles from "./style.module.scss";
 import { useMemo } from "react";
 import dayjs from "dayjs";
 
-type BlogTopProps = {
+type TagTopProps = {
+  name: string;
   range: number;
 };
 
-function BlogTop({ range }: BlogTopProps): JSX.Element {
+function TagTop({ name, range }: TagTopProps): JSX.Element {
   const { path, currentPage } = useCurrentPage();
   const skip = (currentPage - 1) * range;
   const { data } = useSWR<BlogPostsData>(
@@ -67,12 +68,13 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
   return (
     <div className={styles["wrapper"]}>
       <main className={styles["container"]}>
-        <div className={styles["blog__information"]}>
-          <h1 className={styles["blog__information__message"]}>
-            不定期でブログを更新しています
-            <br />
-            主に開発技術や趣味のギターや植物の記事を書いていこうと思います
-          </h1>
+        <div className={styles["tag__information"]}>
+          <p className={styles["tag__information__text"]}>
+            <span className={styles["tag__information__text-bold"]}>
+              {name}
+            </span>
+            の記事一覧
+          </p>
         </div>
         <div className={styles["cards"]}>{cards}</div>
         <div className={styles["pagination"]}>
@@ -87,4 +89,4 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
   );
 }
 
-export default BlogTop;
+export default TagTop;

@@ -1,0 +1,58 @@
+.fukidashi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font-black);
+}
+
+.fukidashi__message {
+  position: relative;
+  width: 360px;
+  height: 300px;
+
+  @media screen and (min-width: 980px) {
+    width: 600px;
+    height: 550px;
+  }
+
+  &__image {
+    position: absolute;
+    width: 360px;
+    height: 300px;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 980px) {
+      top: 58%;
+      width: 600px;
+      height: 550px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 980px) {
+      width: 600px;
+      font-size: 6rem;
+    }
+
+    &-emphasize {
+      color: var(--color-main);
+    }
+  }
+}

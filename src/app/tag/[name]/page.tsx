@@ -1,31 +1,44 @@
 import React from "react";
 import SwrConfig from "@/components/SwrConfig";
-import { BlogPostSkeleton } from "@/api/posts/[id]";
-import BlogPost from "@/components/BlogPost";
+import { BlogPostsData } from "@/api/posts";
+import TagTop from "@/components/TagTop";
 
 type PageProps = {
   params: {
-    id: string;
+    name: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-async function getEntries(id: string): Promise<BlogPostSkeleton> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/posts/${id}`, {
-    cache: "no-store",
-  });
+async function getEntries(
+  name: string,
+  page: number,
+  range: number,
+): Promise<BlogPostsData> {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/tags/${name}?skip=${page}&limit=${range}`,
+    {
+      cache: "no-store",
+    },
+  );
 
   return res.json();
 }
 
-async function Page({ params: { id } }: PageProps): Promise<JSX.Element> {
-  const data = await getEntries(id);
+async function Page({
+  params: { name },
+  searchParams,
+}: PageProps): Promise<JSX.Element> {
+  const range = 9;
+  const page = (Number(searchParams.page || 1) - 1) * range;
+  const data = await getEntries(name, page, range);
+
+  console.log(name, range, page);
 
   return (
-    <>
-      <SwrConfig value={{ fallbackData: data }}>
-        <BlogPost id={id} />
-      </SwrConfig>
-    </>
+    <SwrConfig value={{ fallbackData: data }}>
+      <TagTop name={name} range={range} />
+    </SwrConfig>
   );
 }
 

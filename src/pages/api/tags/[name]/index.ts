@@ -12,10 +12,15 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const { name } = req.query as ApiProps;
+  const skip = Number(req.query.skip || 0);
+  const limit = Number(req.query.limit || 8);
+
   try {
     const entries = await client.getEntries<BlogPostsSkeleton>({
       content_type: "worldOfZonoV2",
       order: ["-fields.publishedAt"],
+      limit,
+      skip,
       "metadata.tags.sys.id[in]": [name],
     });
 

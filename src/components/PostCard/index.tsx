@@ -2,6 +2,7 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import CategoriesLink from "@/components/TagLink";
 
 type PostCardProps = {
   slug: {
@@ -27,18 +28,6 @@ function PostCard({
     thumbnail: { url, alt },
   },
 }: PostCardProps): JSX.Element {
-  const categoriesList = categories.map((category) => {
-    return (
-      <Link
-        href={`/category/${category}`}
-        className={styles["card__categories__item"]}
-        key={category}
-      >
-        {category}
-      </Link>
-    );
-  });
-
   return (
     <section className={styles["card"]}>
       <div className={styles["card__header"]}>
@@ -51,8 +40,8 @@ function PostCard({
           <span>{publishedAt}</span>
         </div>
         <div className={styles["card__title"]}>
-          <Link href={`/post/${postId}`}>
-            <h1>{title}</h1>
+          <Link href={`/blog/${postId}`}>
+            <h2>{title}</h2>
           </Link>
         </div>
         <div className={styles["card__description"]}>
@@ -60,12 +49,14 @@ function PostCard({
         </div>
         <div className={styles["card__link__button"]}>
           <div className={styles["card__link__button--inner"]}>
-            <Link href={`/post/${postId}`}>
+            <Link href={`/blog/${postId}`}>
               <span>続きを読む</span>
             </Link>
           </div>
         </div>
-        <div className={styles["card__categories"]}>{categoriesList}</div>
+        <div className={styles["card__categories"]}>
+          <CategoriesLink categories={categories} />
+        </div>
       </div>
     </section>
   );

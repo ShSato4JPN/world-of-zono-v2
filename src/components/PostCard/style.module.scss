@@ -1,11 +1,18 @@
+$card-max-width: 400px;
+
 .card {
   width: 100%;
+  color: var(--color-card-font);
   border-radius: 0.75rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  background-color: #f7f7f7;
+  border: solid 1px var(--color-border);
+  background-color: var(--color-card-background);
+
+  @media screen and (orientation: landscape) {
+    width: $card-max-width;
+  }
 
   @media screen and (min-width: 980px) {
-    width: 350px;
+    width: $card-max-width;
   }
 }
 
@@ -17,7 +24,7 @@
   border-bottom: solid 1px var(--color-border);
 
   @media screen and (min-width: 980px) {
-    height: 280px;
+    height: calc($card-max-width / 1.91);
   }
 }
 
@@ -26,6 +33,7 @@
   margin: 0;
 
   img {
+    background-color: #f1f9ff;
     border-radius: 0.75rem 0.75rem 0 0;
   }
 }
@@ -35,15 +43,21 @@
 }
 
 .card__date {
-  font-size: 1.7rem;
+  color: #656565;
+  font-size: 1.5rem;
 }
 
 .card__title {
   font-size: 1.6rem;
+  margin: 1.2rem 0;
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  h2 {
+    margin: 0;
   }
 }
 
@@ -59,8 +73,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.3rem;
 }
 
 .card__link__button--inner {
@@ -69,32 +83,17 @@
   border: solid 1px var(--color-border);
 
   span {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
-    background-color: #b4dbe3;
+    background-color: var(--color-card-more-read-hover);
   }
 }
 
 .card__categories {
   display: flex;
   flex-wrap: wrap;
-}
-
-.card__categories__item {
-  font-size: 1.4rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  padding: 0.3rem 0.5rem;
-  border: solid 1px var(--color-border);
-  background-color: #b3daf5;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #b4dbe3;
-  }
 }

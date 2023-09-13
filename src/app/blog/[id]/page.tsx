@@ -21,11 +21,9 @@ async function Page({ params: { id } }: PageProps): Promise<JSX.Element> {
   const data = await getEntries(id);
 
   return (
-    <>
-      <SwrConfig value={{ fallbackData: data }}>
-        <BlogPost id={id} />
-      </SwrConfig>
-    </>
+    <SwrConfig value={{ fallbackData: data }}>
+      <BlogPost id={id} />
+    </SwrConfig>
   );
 }
 

@@ -5,7 +5,8 @@ import { ReactNode } from "react";
 import fetcher from "@/libs/fetcher";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WozTop from "@/components/WozTop";
+import WozRoot from "@/components/WozRoot";
+import GaScript from "@/components/GaScript";
 
 export const metadata = {
   title: "World-Of-Zono",
@@ -32,9 +33,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
       <body className={zenMaruGothic.className}>
+        <GaScript />
         <SwrConfig value={{ fetcher }}>
           <Header />
-          <WozTop>{children}</WozTop>
+          <WozRoot>{children}</WozRoot>
           <Footer />
         </SwrConfig>
       </body>
