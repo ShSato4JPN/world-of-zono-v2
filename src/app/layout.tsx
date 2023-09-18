@@ -28,11 +28,9 @@ export const metadata: Metadata = {
 const zenMaruGothic = localFont({
   fallback: ["sans-serif"],
   src: [
-    { path: "./ZenMaruGothic-Light.ttf", weight: "300", style: "light" },
     { path: "./ZenMaruGothic-Regular.ttf", weight: "400", style: "normal" },
     { path: "./ZenMaruGothic-Medium.ttf", weight: "500", style: "medium" },
     { path: "./ZenMaruGothic-Bold.ttf", weight: "700", style: "bold" },
-    { path: "./ZenMaruGothic-Black.ttf", weight: "900", style: "black" },
   ],
 });
 

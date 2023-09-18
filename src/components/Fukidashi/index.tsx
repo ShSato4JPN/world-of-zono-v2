@@ -12,6 +12,7 @@ function Fukidashi(): JSX.Element {
             alt="fukidashi"
             fill
             objectFit="contain"
+            priority={true}
           />
         </div>
         <div className={styles["fukidashi__message__text"]}>
