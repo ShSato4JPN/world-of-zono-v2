@@ -7,14 +7,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WozRoot from "@/components/WozRoot";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "World-Of-Zono",
   description: "WOZ（World-Of-Zono）の公式サイトです",
   openGraph: {
     title: "World-Of-Zono",
     description: "WOZ（World-Of-Zono）の公式サイトです",
     siteName: "World-Of-Zono",
+    images: {
+      url: "/woz-logo.webp",
+      alt: "World-Of-Zono",
+      width: "500",
+      height: "500",
+    },
   },
 };
 

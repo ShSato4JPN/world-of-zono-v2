@@ -17,7 +17,8 @@ function HamburgerMenu(): JSX.Element {
   //const pages = useMemo(() => ["home", "blog", "about", "contact"], []);
   const pages = useMemo(() => ["home", "blog", "about"], []);
 
-  console.log(path);
+  // dubug
+  //console.log(path);
 
   const handleClickEvent = useCallback(() => {
     setOpen(() => !isOpen);

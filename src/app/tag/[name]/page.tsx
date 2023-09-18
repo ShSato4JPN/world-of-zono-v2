@@ -33,8 +33,6 @@ async function Page({
   const page = (Number(searchParams.page || 1) - 1) * range;
   const data = await getEntries(name, page, range);
 
-  console.log(name, range, page);
-
   return (
     <SwrConfig value={{ fallbackData: data }}>
       <TagTop name={name} range={range} />
