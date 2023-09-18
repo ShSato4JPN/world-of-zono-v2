@@ -21,7 +21,9 @@ function Fukidashi(): JSX.Element {
             W
           </span>
           orld{" "}
-          <span className={styles["fukidashi__essage__text-emphasize"]}>O</span>
+          <span className={styles["fukidashi__message__text-emphasize"]}>
+            O
+          </span>
           f{" "}
           <span className={styles["fukidashi__message__text-emphasize"]}>
             Z

@@ -36,21 +36,21 @@ function AboutTop(): JSX.Element {
             </p>
           </div>
           <div className={styles["body__sns"]}>
-            <a href="/">
+            <a href="https://www.instagram.com/satoshi1221_jp/" target="_blank">
               <AiFillInstagram
                 color="#f4f4f4"
                 size={40}
                 className={styles["body__sns-instagram"]}
               />
             </a>
-            <a href="/">
+            <a href="https://twitter.com/zonono3104" target="_blank">
               <AiFillTwitterCircle
                 color="#f4f4f4"
                 size={40}
                 className={styles["body__sns-twitter"]}
               />
             </a>
-            <a href="/">
+            <a href="https://github.com/ShSato4JPN" target="_blank">
               <AiFillGithub
                 color="#f4f4f4"
                 size={40}

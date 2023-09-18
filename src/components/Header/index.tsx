@@ -43,21 +43,33 @@ function Header(): JSX.Element {
             </div> */}
           </div>
           <div className={styles["header__other-links__sns"]}>
-            <a href="/" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://www.instagram.com/satoshi1221_jp/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <AiFillInstagram
                 color="#f4f4f4"
                 size={40}
                 className={styles["header__other-links__sns-instagram"]}
               />
             </a>
-            <a href="/" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://twitter.com/zonono3104"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <AiFillTwitterCircle
                 color="#f4f4f4"
                 size={40}
                 className={styles["header__other-links__sns-twitter"]}
               />
             </a>
-            <a href="/" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://github.com/ShSato4JPN"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <AiFillGithub
                 color="#f4f4f4"
                 size={40}
