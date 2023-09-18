@@ -6,7 +6,7 @@ import fetcher from "@/libs/fetcher";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WozRoot from "@/components/WozRoot";
-import GaScript from "@/components/GaScript";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata = {
   title: "World-Of-Zono",
@@ -32,8 +32,10 @@ const zenMaruGothic = localFont({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={zenMaruGothic.className}>
-        <GaScript />
         <SwrConfig value={{ fetcher }}>
           <Header />
           <WozRoot>{children}</WozRoot>
