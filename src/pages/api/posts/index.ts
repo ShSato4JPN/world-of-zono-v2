@@ -19,8 +19,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  const skip = Number(req.query.skip || 0);
-  const limit = Number(req.query.limit || 8);
+  const skip = Number(req.query.skip?.at(0) || 0);
+  const limit = Number(req.query.limit?.at(0) || 8);
 
   const entries = await client.getEntries<BlogPostsSkeleton>({
     content_type: "worldOfZonoV2",

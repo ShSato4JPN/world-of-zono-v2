@@ -12,8 +12,8 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const { name } = req.query as ApiProps;
-  const skip = Number(req.query.skip || 0);
-  const limit = Number(req.query.limit || 8);
+  const skip = Number(req.query.skip?.at(0) || 0);
+  const limit = Number(req.query.limit?.at(0) || 8);
 
   try {
     const entries = await client.getEntries<BlogPostsSkeleton>({
