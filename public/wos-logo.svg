@@ -2,16 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="300mm"
-   height="300mm"
-   viewBox="0 0 300 300"
+   width="1214.1566mm"
+   height="645.34015mm"
+   viewBox="0 0 1214.1566 645.34015"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed, 2023-07-21)"
-   sodipodi:docname="wos-logo.svg"
-   inkscape:export-filename="woz-logo.png"
-   inkscape:export-xdpi="25.4"
-   inkscape:export-ydpi="25.4"
+   sodipodi:docname="no-image.svg"
+   inkscape:export-filename="wos-logo.webp"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,45 +25,58 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     inkscape:zoom="0.87886674"
-     inkscape:cx="224.1523"
-     inkscape:cy="476.18141"
-     inkscape:window-width="1440"
-     inkscape:window-height="872"
-     inkscape:window-x="2560"
-     inkscape:window-y="304"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:document-units="px"
+     inkscape:zoom="0.1758328"
+     inkscape:cx="2547.875"
+     inkscape:cy="1054.9795"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <circle
-       style="fill:#3da5ff;fill-opacity:1;stroke-width:0.265;stroke-dasharray:none"
+     id="layer1"
+     transform="translate(3.8538242,6.4230408)">
+    <rect
+       style="fill:#feffff;fill-opacity:1;stroke:#5694c7;stroke-width:0.891609"
+       id="rect1"
+       width="1213.265"
+       height="644.44849"
+       x="-3.4080198"
+       y="-5.9772363"
+       ry="0" />
+    <ellipse
+       style="fill:#3da5ff;fill-opacity:1;stroke-width:0.527644;stroke-dasharray:none"
        id="path6"
-       cx="150"
-       cy="150"
-       r="150" />
-    <circle
-       style="fill:#59aeff;fill-opacity:1;stroke-width:0.264583"
+       cx="608.34241"
+       cy="316.88596"
+       rx="348.47198"
+       ry="255.98018" />
+    <ellipse
+       style="fill:#59aeff;fill-opacity:1;stroke-width:0.526815"
        id="path6-7"
        inkscape:label="path6-7"
-       r="140"
-       cy="150"
-       cx="150" />
-    <circle
-       style="fill:#68c2ff;fill-opacity:1;stroke-width:0.264583"
+       cy="316.88596"
+       cx="608.34241"
+       rx="325.24048"
+       ry="238.91484" />
+    <ellipse
+       style="fill:#68c2ff;fill-opacity:1;stroke-width:0.526815"
        id="path6-7-9"
        inkscape:label="path6-7"
-       cy="150"
-       cx="150"
-       r="130" />
+       cy="316.88596"
+       cx="608.34241"
+       rx="302.00903"
+       ry="221.84949" />
     <g
        id="g12"
-       transform="matrix(1.0048487,0,0,0.99990164,3.0557693,0.0151719)"
+       transform="matrix(2.3344107,0,0,1.7063667,266.96939,60.931644)"
        style="stroke:#5694c7;stroke-width:2.1">
       <g
          id="text6"
