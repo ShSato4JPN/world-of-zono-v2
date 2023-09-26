@@ -31,11 +31,12 @@ async function Page({
 }: PageProps): Promise<JSX.Element> {
   const range = 9;
   const page = (Number(searchParams.page || 1) - 1) * range;
-  const data = await getEntries(name, page, range);
+  const decodedName = decodeURI(name);
+  const data = await getEntries(decodedName, page, range);
 
   return (
     <SwrConfig value={{ fallbackData: data }}>
-      <TagTop name={name} range={range} />
+      <TagTop name={decodedName} range={range} />
     </SwrConfig>
   );
 }
