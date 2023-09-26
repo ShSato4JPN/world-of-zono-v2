@@ -19,7 +19,7 @@ async function Page({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }): Promise<JSX.Element> {
-  const range = 5;
+  const range = 9;
   const page = (Number(searchParams.page || 1) - 1) * range;
   const data = await getEntries(page, range);
 
