@@ -71,9 +71,8 @@ function TagTop({ name, range }: TagTopProps): JSX.Element {
         <div className={styles["tag__information"]}>
           <p className={styles["tag__information__text"]}>
             <span className={styles["tag__information__text-bold"]}>
-              {name}
+              # {name}
             </span>
-            の記事一覧
           </p>
         </div>
         <div className={styles["cards"]}>{cards}</div>
