@@ -8,7 +8,7 @@ export type BlogPostsSkeleton = {
     title: contentful.EntryFieldTypes.Text;
     publishedAt: contentful.EntryFieldTypes.Date;
     body: contentful.EntryFieldTypes.Text;
-    category: contentful.EntryFieldTypes.Array<contentful.EntryFieldTypes.Symbol>;
+    tags: contentful.EntryFieldTypes.Array<contentful.EntryFieldTypes.Symbol>;
     thumbnail?: contentful.EntryFieldTypes.AssetLink;
   };
 };

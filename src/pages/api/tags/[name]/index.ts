@@ -21,7 +21,7 @@ export default async function handler(
       order: ["-fields.publishedAt"],
       limit,
       skip,
-      "metadata.tags.sys.id[in]": [name],
+      "fields.tags[in]": [name],
     });
 
     res.json(entries);

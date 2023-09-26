@@ -2,14 +2,14 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import CategoriesLink from "@/components/TagLink";
+import TagsLink from "@/components/TagLink";
 
 type PostCardProps = {
   slug: {
     postId: string;
     title: string;
     body: string;
-    categories: string[];
+    tags: string[];
     publishedAt: string;
     thumbnail: {
       url: string;
@@ -23,7 +23,7 @@ function PostCard({
     postId,
     title,
     body,
-    categories,
+    tags,
     publishedAt,
     thumbnail: { url, alt },
   },
@@ -54,8 +54,8 @@ function PostCard({
             </Link>
           </div>
         </div>
-        <div className={styles["card__categories"]}>
-          <CategoriesLink categories={categories} />
+        <div className={styles["card__tags"]}>
+          <TagsLink tags={tags} />
         </div>
       </div>
     </section>

@@ -4,25 +4,25 @@ import { useMemo } from "react";
 import Link from "next/link";
 
 type TagLinksProps = {
-  categories: string[];
+  tags: string[];
 };
 
-function TagLinks({ categories }: TagLinksProps): JSX.Element[] {
-  const categoriesList = useMemo(
+function TagLinks({ tags }: TagLinksProps): JSX.Element[] {
+  const tagsList = useMemo(
     () =>
-      categories.map((category) => (
+      tags.map((tags) => (
         <Link
-          href={`/tag/${category}`}
-          className={styles["card__categories__item"]}
-          key={category}
+          href={`/tag/${tags}`}
+          className={styles["card__tags__item"]}
+          key={tags}
         >
-          {category}
+          {tags}
         </Link>
       )),
-    [categories],
+    [tags],
   );
 
-  return categoriesList;
+  return tagsList;
 }
 
 export default TagLinks;

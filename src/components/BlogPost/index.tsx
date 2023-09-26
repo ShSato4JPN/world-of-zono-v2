@@ -5,7 +5,7 @@ import ArticleViewer from "@/components/ArticleViewer";
 import styles from "./style.module.scss";
 import dayjs from "dayjs";
 import Separator from "@/components/Separator";
-import CategoriesLink from "@/components/TagLink";
+import TagsLink from "@/components/TagLink";
 // import AbgoutMe from "@/components/AboutMe";
 
 type BlogPostProps = {
@@ -17,7 +17,7 @@ function BlogPost({ id }: BlogPostProps): JSX.Element {
 
   const title = data?.fields.title as string;
   const body = data?.fields.body as string;
-  const categories = data?.fields.category as string[];
+  const tags = data?.fields.tags as string[];
   const publishedAt = dayjs(data?.fields.publishedAt as string).format(
     "YYYY-MM-DD",
   );
@@ -33,8 +33,8 @@ function BlogPost({ id }: BlogPostProps): JSX.Element {
             <div className={styles["article__title"]}>
               <span>{title}</span>
             </div>
-            <section className={styles["article__categories"]}>
-              <CategoriesLink categories={categories} />
+            <section className={styles["article__tags"]}>
+              <TagsLink tags={tags} />
             </section>
           </div>
           <Separator />

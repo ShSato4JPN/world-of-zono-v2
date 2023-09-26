@@ -32,7 +32,7 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
         const body = v.fields.body as string;
         // body の内容を整形する
         const shapedBody = body.replace(/<br\s*\/>/g, " ");
-        const categories = v.fields.category as string[];
+        const tags = v.fields.tags as string[];
         const publishedAt = dayjs(v.fields.publishedAt as string).format(
           "YYYY-MM-DD",
         );
@@ -50,7 +50,7 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
               postId,
               title,
               body: shapedBody,
-              categories,
+              tags,
               publishedAt,
               thumbnail: {
                 url,
