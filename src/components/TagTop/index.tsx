@@ -39,7 +39,7 @@ function TagTop({ name, range }: TagTopProps): JSX.Element {
         );
         const thumbnail = (v.fields?.thumbnail || {}) as BlogAssetLinkType;
         const url = existsThumbnail(thumbnail)
-          ? `https://${thumbnail.fields.file.url}`
+          ? `https:${thumbnail.fields.file.url}`
           : `/no-image.svg`;
         const alt = existsThumbnail(thumbnail)
           ? thumbnail.fields.title
