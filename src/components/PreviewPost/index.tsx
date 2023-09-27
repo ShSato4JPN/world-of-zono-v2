@@ -1,25 +1,25 @@
 "use client";
-import { BlogPostData } from "@/api/posts/[id]";
 import useSWR from "swr";
+import styles from "@/components/BlogPost/style.module.scss";
 import ArticleViewer from "@/components/ArticleViewer";
-import styles from "./style.module.scss";
 import dayjs from "dayjs";
 import Separator from "@/components/Separator";
 import TagsLink from "@/components/TagLink";
+import { PreviewPostData } from "@/api/preview/[id]";
 
-type BlogPostProps = {
+type PreviewProps = {
   id: string;
 };
 
-function BlogPost({ id }: BlogPostProps): JSX.Element {
-  const { data } = useSWR<BlogPostData>(`/api/posts/${id}`);
+function BlogPost({ id }: PreviewProps): JSX.Element {
+  const { data } = useSWR<PreviewPostData>(`/api/preview/${id}`);
 
-  const title = data?.fields.title as string;
-  const body = data?.fields.body as string;
-  const tags = data?.fields.tags as string[];
-  const publishedAt = dayjs(data?.fields.publishedAt as string).format(
-    "YYYY-MM-DD",
-  );
+  const title = data?.fields.title["ja-JP"] || "";
+  const body = data?.fields.body["ja-JP"] || "";
+  const tags = data?.fields.tags["ja-JP"] || [];
+  const publishedAt =
+    dayjs(data?.fields.publishedAt["ja-JP"] as string).format("YYYY-MM-DD") ||
+    "";
 
   return (
     <div className={styles["wrapper"]}>
