@@ -5,6 +5,18 @@ pre {
   line-height: 2.2rem;
 }
 
+p {
+  margin: 0;
+}
+
+.article-link:after {
+  padding: 0 0 0 0.2rem;
+  display: inline-block;
+  margin-right: 3px;
+  width: 1rem;
+  content: url("/link-icon.svg");
+}
+
 .quote {
   margin-top: 1.5rem;
 }
@@ -21,6 +33,19 @@ pre {
   width: 100%;
 }
 
-.test {
-  background-color: orange;
+.bold {
+  font-weight: bold;
+}
+
+.big-bold {
+  font-weight: bold;
+  font-size: 2.1rem;
+}
+
+.emphasis-link {
+  color: rgb(251, 121, 28);
+}
+
+.emphasis {
+  color: rgb(251, 69, 28);
 }
