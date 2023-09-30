@@ -4,7 +4,8 @@ import useCurrentPage from "@/hooks/useCurrentPage";
 import Pagination from "@/components/Pagination";
 import PostCard from "@/components/PostCard";
 import useSWR from "swr";
-import { BlogAssetLinkType } from "@/types/contentful-types";
+import { removeTagString, existsThumbnail } from "@/libs/utils";
+import BlogAssetLinkType from "@/types/contentful-types";
 import styles from "./style.module.scss";
 import { useMemo } from "react";
 import dayjs from "dayjs";
@@ -21,9 +22,6 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
   );
   const totalPages = Math.ceil((data?.total || 1) / range);
 
-  const existsThumbnail = (thumbnail: BlogAssetLinkType): boolean =>
-    0 < Object.keys(thumbnail).length;
-
   const cards = useMemo(
     () =>
       data?.items.map((v) => {
@@ -31,7 +29,7 @@ function BlogTop({ range }: BlogTopProps): JSX.Element {
         const title = v.fields.title as string;
         const body = v.fields.body as string;
         // body の内容を整形する
-        const shapedBody = body.replace(/<br\s*\/>/g, " ");
+        const shapedBody = removeTagString(body);
         const tags = v.fields.tags as string[];
         const publishedAt = dayjs(v.fields.publishedAt as string).format(
           "YYYY-MM-DD",

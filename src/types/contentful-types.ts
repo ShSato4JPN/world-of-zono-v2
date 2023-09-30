@@ -3,32 +3,7 @@
  * 実装方法が分かり次第修正する
  * 公式ドキュメント： https://github.com/contentful/contentful.js/blob/master/TYPESCRIPT.md#generating-type-definitions-for-content-types
  */
-export type BlogAssetLinkType = {
-  metadata: {
-    tags: [];
-  };
-  sys: {
-    space: {
-      sys: {
-        type: string;
-        linkType: string;
-        id: string;
-      };
-    };
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    environment: {
-      sys: {
-        id: string;
-        type: string;
-        linkType: string;
-      };
-    };
-    revision: number;
-    locale: string;
-  };
+type BlogAssetLinkType = {
   fields: {
     title: string;
     description: string;
@@ -46,3 +21,5 @@ export type BlogAssetLinkType = {
     };
   };
 };
+
+export default BlogAssetLinkType;

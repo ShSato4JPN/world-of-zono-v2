@@ -10,12 +10,12 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "World-Of-Zono",
-  description: "WOZ（World-Of-Zono）の公式サイトです",
+  title: "World Of Zono",
+  description: "WOZ（World Of Zono）の公式サイトです",
   openGraph: {
-    title: "World-Of-Zono",
-    description: "WOZ（World-Of-Zono）の公式サイトです",
-    siteName: "World-Of-Zono",
+    title: "World Of Zono",
+    description: "WOZ（World Of Zono）の公式サイトです",
+    siteName: "World Of Zono",
     images: {
       url: "/woz-logo.webp",
       alt: "World-Of-Zono",
