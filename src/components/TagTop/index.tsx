@@ -4,7 +4,7 @@ import useCurrentPage from "@/hooks/useCurrentPage";
 import Pagination from "@/components/Pagination";
 import PostCard from "@/components/PostCard";
 import useSWR from "swr";
-import { BlogAssetLinkType } from "@/types/contentful-types";
+import BlogAssetLinkType from "@/types/contentful-types";
 import styles from "./style.module.scss";
 import { useMemo } from "react";
 import dayjs from "dayjs";
