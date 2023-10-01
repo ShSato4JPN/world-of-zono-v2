@@ -2,7 +2,7 @@ import BlogAssetLinkType from "@/types/contentful-types";
 
 export const removeTagString = (str: string): string => {
   return str.replace(
-    /<p[^>]*>|<\/p>|<span[^>]*>|<\/span>|<br\s*\/?>|<img[^>]*>|\n/gi,
+    /<div[^>]*>|<\/div>|<a[^>]*>|<\/a>|<p[^>]*>|<\/p>|<span[^>]*>|<\/span>|<br\s*\/?>|<img[^>]*>|\n/gi,
     "",
   );
 };
