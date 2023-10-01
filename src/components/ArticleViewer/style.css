@@ -66,6 +66,10 @@ h2 {
   text-underline-offset: 0.5rem;
 }
 
+.whisper {
+  color: rgb(174, 174, 174);
+}
+
 .filepath {
   background-color: rgb(234, 234, 234);
   border-radius: 5px;
