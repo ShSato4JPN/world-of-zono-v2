@@ -41,7 +41,7 @@ const options: HTMLReactParserOptions = {
         // コードハイライト用
         const node = domNode.childNodes[0] as Node;
         // コードハイライト用にインデントを調整
-        const indentSize = 5;
+        const indentSize = 2;
         const code = node.data.replace(/ {2}/g, " ".repeat(indentSize));
         const highlightedCode = hljs.highlight(language, code).value;
 
