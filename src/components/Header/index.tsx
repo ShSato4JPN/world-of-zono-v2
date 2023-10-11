@@ -36,6 +36,11 @@ function Header(): JSX.Element {
                 <span>About</span>
               </Link>
             </div>
+            <div className={styles["header__other-links__item"]}>
+              <Link href="/contact">
+                <span>Contact</span>
+              </Link>
+            </div>
             {/* <div className={styles["header__other-links__item"]}>
               <Link href="/contact">
                 <span>Contact</span>

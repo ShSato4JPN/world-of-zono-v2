@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "ZenMaruGothic";
+  src: url("../../app/ZenMaruGothic-Regular.ttf");
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem 2.5rem 0 2.5rem;
+
+  @media screen and (min-width: 980px) {
+    width: 550px;
+  }
+}
+
+.isError {
+  color: var(--color-form-error-font) !important;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font-black);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+
+  &__item__label {
+    width: 100%;
+    color: var(--color-form-font);
+  }
+
+  &__item__input__text {
+    font-family: "ZenMaruGothic";
+    font-size: 1.7rem;
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--color-background);
+    border-radius: 5px;
+  }
+
+  &__item__input__textarea {
+    font-family: "ZenMaruGothic";
+    font-size: 1.7rem;
+    width: 100%;
+    line-height: 2.4rem;
+    padding: 0.6rem;
+    border: 2px solid var(--color-background);
+    border-radius: 5px;
+  }
+
+  &__item__submit {
+    display: inline-block;
+    margin: 1.5rem 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background: var(--color-sub);
+    color: var(--color-font-white);
+    line-height: 1.5rem;
+    transition: 0.3s;
+    border: 2px solid var(--color-sub);
+    border-radius: 5px;
+  }
+
+  &__item__submit:hover {
+    box-shadow:
+      0 1px 10px rgba(0, 0, 0, 0.4),
+      0 0 50px rgba(128, 128, 128, 0.1);
+  }
+}
