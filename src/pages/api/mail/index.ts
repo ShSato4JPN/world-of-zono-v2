@@ -22,7 +22,7 @@ export default async function handler(
       to: process.env.NODEMAILER_EMAIL,
       replyTo: req.body.slug.email,
       subject: req.body.slug.subject,
-      text: req.body.slug.text,
+      text: `${req.body.slug.email}\n${req.body.slug.text}`,
     });
 
     res.status(200).json({ message: "ok" });
