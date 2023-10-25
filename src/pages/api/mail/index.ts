@@ -27,6 +27,6 @@ export default async function handler(
 
     res.status(200).json({ message: "ok" });
   } catch (error) {
-    res.status(404).json({ message: "not found" });
+    res.status(500).json({ message: "error" });
   }
 }

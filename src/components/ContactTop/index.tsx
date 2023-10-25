@@ -23,7 +23,7 @@ function AboutTop(): JSX.Element {
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     toast.promise(
-      axios.post(`${process.env.NEXT_PUBLIC_URL}/api/mail`, {
+      axios.post(`/api/mail`, {
         slug: {
           name: data.name,
           email: data.email,
