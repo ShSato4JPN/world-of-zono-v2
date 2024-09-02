@@ -45,7 +45,7 @@
     "eslint-plugin-react": "7.33.0",
     "eslint-plugin-react-hooks": "5.0.0-canary-7118f5dd7-20230705",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3",
+    "lint-staged": "15.2.10",
     "prettier": "3.0.0",
     "stylelint": "15.10.2",
     "stylelint-config-css-modules": "4.3.0",
