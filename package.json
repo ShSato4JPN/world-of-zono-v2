@@ -15,7 +15,7 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "contentful": "10.5.3",
-    "contentful-management": "10.46.4",
+    "contentful-management": "11.35.1",
     "dayjs": "1.11.9",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
