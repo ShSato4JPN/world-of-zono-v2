@@ -22,7 +22,7 @@
     "framer-motion": "10.16.2",
     "hamburger-react": "2.5.0",
     "highlight.js": "11.8.0",
-    "html-react-parser": "4.2.1",
+    "html-react-parser": "5.1.18",
     "next": "13.4.12",
     "nodemailer": "6.9.5",
     "query-string": "8.1.0",
